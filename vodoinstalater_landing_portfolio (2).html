@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodoinstalater | 20 godina iskustva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0b0f1a;
+            color: #f0f4f8;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s ease;
+        }
+        .zoom-in.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+            padding: 120px 20px;
+            text-align: center;
+            animation: fadeHero 1.2s ease forwards;
+        }
+        @keyframes fadeHero {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #fefefe;
+        }
+        header p {
+            font-size: 1.3rem;
+            color: #e0f2fe;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 14px 28px;
+            background: #22d3ee;
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(34, 211, 238, 0.4);
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        h2 { text-align:center; margin-bottom:60px; font-size:2rem; color:#ffffff; }
+
+        .services, .pricing, .reviews, .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 30px;
+            border-radius: 18px;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card i {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: #06b6d4;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(3, 105, 161, 0.5);
+        }
+        .price { font-size: 1.5rem; font-weight:700; margin-top:10px; color:#22d3ee; }
+
+        .contact-box {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            padding:40px;
+            border-radius:18px;
+            text-align:center;
+        }
+        form { display:grid; gap:15px; margin-top:20px; }
+        input, textarea {
+            padding:12px;
+            border-radius:10px;
+            border:none;
+            font-family:inherit;
+            transition: 0.3s ease;
+            background:#0f172a;
+            color:#f0f4f8;
+        }
+        input:focus, textarea:focus {
+            outline:none;
+            box-shadow:0 0 0 2px #06b6d4;
+        }
+        button {
+            padding:14px;
+            border:none;
+            border-radius:10px;
+            font-weight:600;
+            cursor:pointer;
+            background:#06b6d4;
+            color:#0f172a;
+            transition:0.3s ease;
+        }
+        button:hover { transform: translateY(-3px); box-shadow:0 8px 20px rgba(6,182,212,0.5); }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Vodoinstalater Adam</h1>
+    <p>Vodoinstalater s 20 godina iskustva</p>
+    <a class="btn" href="tel:+385912345678"><i class="bi bi-telephone-fill"></i> Nazovi odmah</a>
+    <a class="btn" href="https://wa.me/385912345678" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+    <a class="btn" href="https://maps.app.goo.gl/7US229Tixv1TRSsz8" target="_blank"><i class="bi bi-geo-alt-fill"></i> Lokacija</a>
+</header>
+
+<section class="fade-up">
+    <h2>Usluge</h2>
+    <div class="services">
+        <div class="card zoom-in"><i class="bi bi-droplet-fill"></i> Instalacija vodovoda</div>
+        <div class="card zoom-in"><i class="bi bi-lightning-fill"></i> Hitne intervencije 0-24</div>
+        <div class="card zoom-in"><i class="bi bi-bucket-fill"></i> Adaptacije kupaonica</div>
+    </div>
+</section>
+
+<section class="fade-up">
+    <h2>Galerija radova</h2>
+    <div class="gallery">
+        <div class="card zoom-in">
+            <img src="C:\Program Files\Slike/kupaonica.jpg" alt="Renovirana kupaonica">
+            <i class="bi bi-house-fill"></i>
+            Renovirana kupaonica
+        </div>
+        <div class="card zoom-in">
+            <img src="C:\Program Files\Slike/popravak.png" alt="Popravci">
+            <i class="bi bi-tools"></i>
+            Popravci
+        </div>
+        <div class="card zoom-in">
+            <img src="C:\Program Files\Slike/hitnainterv.png" alt="Hitne Intervencije">
+            <i class="bi bi-wrench"></i>
+            Hitne Intervencije
+        </div>
+    </div>
+</section>
+
+<section class="fade-up">
+    <h2>Cjenik</h2>
+    <div class="pricing">
+        <div class="card zoom-in"><i class="bi bi-clock-fill"></i><strong>Izlazak na teren</strong><div class="price">od 30€</div></div>
+        <div class="card zoom-in"><i class="bi bi-faucet"></i><strong>Zamjena slavine</strong><div class="price">od 40€</div></div>
+        <div class="card zoom-in"><i class="bi bi-bag-fill"></i><strong>Adaptacija kupaonice</strong><div class="price">po dogovoru</div></div>
+    </div>
+</section>
+
+<section class="fade-up">
+    <h2>Recenzije</h2>
+    <div class="reviews">
+        <div class="card zoom-in">"Brza i profesionalna usluga." ⭐⭐⭐⭐⭐</div>
+        <div class="card zoom-in">"Riješio kvar isti dan." ⭐⭐⭐⭐⭐</div>
+        <div class="card zoom-in">"Vrhunska izvedba i korektna cijena." ⭐⭐⭐⭐⭐</div>
+    </div>
+</section>
+
+<section class="fade-up">
+    <h2>Kontakt</h2>
+    <div class="contact-box zoom-in">
+        <p><i class="bi bi-telephone-fill"></i> Telefon: <a href="tel:+385912345678" style="color:#22d3ee;">+385 91 234 5678</a></p>
+        <p><i class="bi bi-envelope-fill"></i> Email: info@vodoinstalater.hr</p>
+        <form>
+            <input type="text" placeholder="Vaše ime" required>
+            <input type="email" placeholder="Vaš email" required>
+            <textarea placeholder="Vaša poruka" required></textarea>
+            <button type="submit"><i class="bi bi-send-fill"></i> Pošalji upit</button>
+        </form>
+    </div>
+</section>
+
+<section class="fade-up" style="text-align:center;">
+    <h2>Lokacija</h2>
+    <a class="btn" href="https://maps.app.goo.gl/7US229Tixv1TRSsz8" target="_blank"><i class="bi bi-geo-alt-fill"></i> Otvori Google Maps</a>
+</section>
+
+<footer>
+    © 2026 Vodoinstalater | Sva prava pridržana
+</footer>
+
+<script>
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up, .zoom-in').forEach(el => {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
